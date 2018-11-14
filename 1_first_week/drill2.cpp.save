@@ -1,0 +1,25 @@
+//Calling IOStream (cout(),cin(),cerr(),...)
+#include <iostream>
+
+//
+inline void keep_window_open()
+{
+  cin.clear();
+  cout << "Please enter a character to exit:";
+  char ch;
+  cin >> ch;
+  return;
+}
+//using std namespace to avoid unnecessary typing (std::cout(); --> cout();)
+using namespace std;
+
+//Declare and initialise main function, which is the core of all programs
+int main()
+{
+//Writing out Hello World! to standard output(to terminal)
+  cout << "Hello World!\n";
+//In Windows this function prevent command prompt to exit after it has been successfully terminated
+  keep_window_open();
+//Most of the functions has a return value, which is also stop the main function
+  return 0;
+}
